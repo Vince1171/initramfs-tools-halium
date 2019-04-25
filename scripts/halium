@@ -551,6 +551,7 @@ mountroot() {
 		set_halium_version_properties ${rootmnt}/halium-system ${rootmnt}/data
 
 		# Make sure we're booting into android's init
+        ln -s ../init ${rootmnt}/init
 		ln -s ../init ${rootmnt}/sbin/init
 		ln -s ../init ${rootmnt}/sbin/recovery
 		tell_kmsg "booting android..."
